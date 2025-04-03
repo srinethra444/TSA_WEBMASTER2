@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="drinks.css">
+        <title>Green Fork</title>
+        <link rel="icon" type="image/png" href="TSA_NEWLOGO.png">
+    </head>
+    <body>
+
+      <a href="checkout.html">
+        <img class="shopping-cart" src="NEWcart.png" alt="Shopping Cart">
+    </a>
+
+    <h1> THE GREEN FORK </h1>
+    <a href="index.html">
+    <img class = "logo" src="TSA_NEWLOGO.png" alt="The Green Fork Logo">
+    </a>
+
+    <div class="navbar">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="appetizer.html">Appetizers</a></li>
+            <li class="dropdown">
+                <a href="entree.html" >Entrees▾<i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="breakfast.html">Breakfast</a>
+                    <a href="lunch.html">Lunch</a>
+                    <a href="dinner.html">Dinner</a>
+                </div>
+            </li>
+            <li><a href="desserts.html">Desserts</a></li>
+            <li><a href="drinks.html" class="active">Drinks</a></li>
+            <li><a href="reference.html">Reference</a></li>
+            <li><a href="team.html">About Us</a></li>
+    
+        </ul>
+    </div>
+
+
+    <div class="dessert-container">
+        <div>
+            <img class="tofu" src="softdrinks.jpg" alt="Soft Drinks" onclick="openModal('SoftModal')">
+            <p class="label">Soft Drinks</p>
+        </div>
+        <div>
+            <img class="tofu" src="capp.jpg" alt="Oatmilk Cappuccino" onclick="openModal('CappModal')">
+            <p class="label">Oatlmilk Cappucino</p>
+        </div>
+        <div>
+            <img class="tofu" src="orangejuice.jpg" alt="Orange Juice" onclick="openModal('OrangeModal')">
+            <p class="label">Freshly Squeezed Orange Juice</p>
+        </div>
+        <div>
+            <img class="tofu" src="rasplemon.avif" alt="Raspberry Lemonade" onclick="openModal('RaspModal')">
+            <p class="label">Raspberry Lemonade</p>
+        </div>
+        <div>
+            <img class="tofu" src="berryblend.webp" alt="Berry Blend" onclick="openModal('BerriesModal')">
+            <p class="label">Berry Blend Protein Smoothie</p>
+        </div>
+        <div>
+            <img class="tofu" src="browniemilkshake.jpeg" alt="Brownie Batter Milkshake" onclick="openModal('MilkshakeModal')">
+            <p class="label">Brownie Batter Milkshake</p>
+        </div>
+    </div>
+
+          <!--
+          <img class = "tofu" src="softdrinks.jpg" alt="Soft Drinks" onclick="openModal('SoftModal')" 
+          style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; position: absolute; top: 260px; left: 50px;">
+          <p class="label" style="position: absolute; top: 410px; left: 50px;">Soft Drinks</p>
+      
+          <img class="tofu" src="capp.jpg" alt="Oatmilk Cappuccino" onclick="openModal('Capp')" 
+          style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; position: absolute; top: 260px; left: 250px;">
+          <p class="label" style="position: absolute; top: 410px; left: 250px;">Oatmilk Cappuccino</p>
+      
+          <img  class = "tofu" src="orangejuice.jpg" alt="Orange Juice" onclick="openModal('OrangeModal')"
+          style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; position: absolute; top: 260px; left: 450px;">
+          <p class="label" style="position: absolute; top: 410px; left: 450px;">Freshly Squeezed Orange Juice</p>
+      
+          <img class = "tofu" src = "rasplemon.avif" alt = "Raspberry Lemonade" onclick="openModal('RaspModal')"
+          style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; position: absolute; top: 260px; left: 650px;">
+          <p class="label" style="position: absolute; top: 410px; left: 650px;">Sparkling Raspberry Lemonade</p>
+      
+          <img class = "tofu" src = "berryblend.webp" alt = "Berry Blend" onclick="openModal('BerriesModal')"
+          style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; position: absolute; top: 260px; left: 850px;">
+          <p id="pb" class="label" style="position: absolute; top: 410px; left: 830px;">Berry Blend Protein Smoothie</p>
+      
+          <img class = "tofu" src = "browniemilkshake.jpeg" alt = "Brownie Batter Milkshake" onclick="openModal('MilkshakeModal')"
+          style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; position: absolute; top: 260px; left: 1050px;">
+          <p id="pb" class="label" style="position: absolute; top: 410px; left: 1030px;">Brownie Batter Milkshake</p>
+      -->
+
+
+          <!-- Soft Drinks Modal -->
+          <div id="SoftModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal('SoftModal')">&times;</span>
+                  <h2>Soft Drinks</h2>
+                  <img class = "modalImage" src="softdrinks.jpg" alt="Soft Drinks">
+                  <p class="description">Choices: Sprite, Coke, Diet Coke, Dr.Pepper, Fanta, Ginger Ale</p>
+                  <p class="price" data-price="3.00">Price: $<span class="price-value">3.00</span></p>
+                  <div class="quantity-controls">
+                      <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                      <span class="quantity">1</span>
+                      <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                  </div>
+                  <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+              </div>
+          </div>
+      
+          <!-- Oatmilk Capp Modal -->
+          <div id="CappModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal('CappModal')">&times;</span>
+                  <h2>Oatmilk Cappuccino</h2>
+                  <img class = "modalImage" src="capp.jpg" alt="Oatmilk Cappuccino">
+                  <p class="description">Served with biscottie and rock candy sugar stick</p>
+                  <p class="price" data-price="5.00">Price: $<span class="price-value">5.00</span></p>
+                  <div class="quantity-controls">
+                      <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                      <span class="quantity">1</span>
+                      <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                  </div>
+                  <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+              </div>
+          </div>
+      
+          <!-- Orange Juice Modal -->
+          <div id="OrangeModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal('OrangeModal')">&times;</span>
+                  <h2>Freshly Squeezed Orange Juice </h2>
+                  <img class = "modalImage" src="orangejuice.jpg" alt="Orange Juice">
+                  <p class="description"></p>
+                  <p class="price" data-price="6.00">Price: $<span class="price-value">6.00</span></p>
+                  <div class="quantity-controls">
+                      <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                      <span class="quantity">1</span>
+                      <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                  </div>
+                  <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+              </div>        
+          </div>
+      
+          <!-- Raspberry Lemonade Modal -->
+          <div id="RaspModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal('RaspModal')">&times;</span>
+                  <h2> Sparkling Raspberry Lemonade </h2>
+                  <img class = "modalImage" src="rasplemon.avif" alt="Raspberry Lemonade">
+                  <p class="description"></p>
+                  <p class="price" data-price="4.00">Price: $<span class="price-value">4.00</span></p>
+                  <div class="quantity-controls">
+                      <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                      <span class="quantity">1</span>
+                      <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                  </div>
+                  <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+              </div>
+          </div>
+      <!-- Berry Blend -->
+          <div id="BerriesModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal('BerriesModal')">&times;</span>
+                  <h2>Berry Blend Protein Smoothie</h2>
+                  <img class = "modalImage" src="berryblend.webp" alt="Berry Blend">
+                  <p class="description">Made with Oat Milk</p>
+                  <p class="price" data-price="6.00">Price: $<span class="price-value">6.00</span></p>
+                  <div class="quantity-controls">
+                      <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                      <span class="quantity">1</span>
+                      <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                  </div>
+                  <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+              </div>
+          </div>
+
+          <!-- Brownie Batter Milkshake -->
+          <div id="MilkshakeModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('MilkshakeModal')">&times;</span>
+                <h2>Brownie Batter Milkshake</h2>
+                <img class = "modalImage" src="browniemilkshake.jpeg" alt="Brownie Batter Milkshake">
+                <p class="description">Made with Oat Milk</p>
+                <p class="price" data-price="6.00">Price: $<span class="price-value">6.00</span></p>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">1</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+            </div>
+        </div>
+
+        <a href="checkout.html">
+          <img class="shopping-cart" src="NEWcart.png" alt="Shopping Cart">
+          <span id="cart-count">0</span>
+      </a>
+      
+        <script>
+          function openModal(modalId) {
+              document.getElementById(modalId).style.display = "flex";
+          }
+      
+          function closeModal(modalId) {
+              document.getElementById(modalId).style.display = "none";
+          }
+      
+          function addToCart(button) {
+          // Get the food name and price
+          const modalContent = button.closest('.modal-content');
+          const foodName = modalContent.querySelector('h2').innerText;
+          const foodPrice = parseFloat(modalContent.querySelector('.price').getAttribute('data-price')); // Ensure price is a number
+          const quantity = parseInt(modalContent.querySelector('.quantity').innerText); // Get the current quantity
+  
+          // Retrieve existing cart from localStorage or initialize an empty array
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+          // Check if the item already exists in the cart
+          const existingItem = cart.find(item => item.name === foodName);
+          if (existingItem) {
+              // If the item exists, increment its quantity
+              existingItem.quantity += 1;
+          } else {
+              // If the item doesn't exist, add it to the cart with quantity 1
+              cart.push({ name: foodName, price: foodPrice, quantity: quantity });
+          }
+  
+          button.innerText = "Added";
+          button.disabled = true;
+  
+          // Save the updated cart back to localStorage
+          localStorage.setItem('cart', JSON.stringify(cart));
+  
+          updateCartCount(); // Update the cart count display
+        
+  
+          // Provide feedback to the user
+          alert(`${foodName} has been added to the cart!`);
+      }        
+      
+          function changeQuantity(button, change) {
+              const quantitySpan = button.parentElement.querySelector('.quantity');
+              let quantity = parseInt(quantitySpan.innerText);
+              quantity += change;
+              if (quantity < 1) quantity = 1;
+              if (quantity > 5) quantity = 5;
+              quantitySpan.innerText = quantity;
+      
+              const minusButton = button.parentElement.querySelector('.quantity-btn:first-child');
+              const plusButton = button.parentElement.querySelector('.quantity-btn:last-child');
+      
+              minusButton.classList.toggle('disabled', quantity === 1);
+              plusButton.classList.toggle('disabled', quantity === 5);
+      
+              // Update price dynamically
+              const priceElement = button.closest('.modal-content').querySelector('.price-value');
+              const basePrice = parseFloat(button.closest('.modal-content').querySelector('.price').getAttribute('data-price'));
+              priceElement.innerText = (basePrice * quantity).toFixed(2);
+          }
+      
+          function changeQuantity(button, change) {
+              const quantitySpan = button.parentElement.querySelector('.quantity');
+              let quantity = parseInt(quantitySpan.innerText);
+              quantity += change;
+              if (quantity < 1) quantity = 1;
+              if (quantity > 5) quantity = 5;
+              quantitySpan.innerText = quantity;
+      
+              const minusButton = button.parentElement.querySelector('.quantity-btn:first-child');
+              const plusButton = button.parentElement.querySelector('.quantity-btn:last-child');
+      
+              minusButton.classList.toggle('disabled', quantity === 1);
+              plusButton.classList.toggle('disabled', quantity === 5);
+      
+              // Update price dynamically
+              const priceElement = button.closest('.modal-content').querySelector('.price-value');
+              const basePrice = parseFloat(button.closest('.modal-content').querySelector('.price').getAttribute('data-price'));
+              priceElement.innerText = (basePrice * quantity).toFixed(2);
+          }
+
+          function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.innerText = totalItems;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartCount();
+});
+      </script>
+    </body>
+</html>

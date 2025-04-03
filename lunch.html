@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Green Fork - Entrees</title>
+    <link rel="stylesheet" href="lunch.css">
+    <title>Green Fork</title>
+    <link rel="icon" type="image/png" href="TSA_NEWLOGO.png">
+</head>
+<body>
+
+    <a href="checkout.html">
+        <img class="shopping-cart" src="NEWcart.png" alt="Shopping Cart">
+    </a>
+
+<!-- Navbar Code-->
+<h1> THE GREEN FORK </h1>
+<a href="index.html">
+<img class = "logo" src="TSA_NEWLOGO.png" alt="The Green Fork Logo">
+</a>
+    <div class="navbar">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="appetizer.html">Appetizers</a></li>
+            <li class="dropdown">
+                <a href="entree.html" class="dropbtn active">Entrees▾<i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="breakfast.html">Breakfast</a>
+                    <a href="lunch.html">Lunch</a>
+                    <a href="dinner.html">Dinner</a>
+                </div>
+            </li>
+            <li><a href="desserts.html">Desserts</a></li>
+            <li><a href="drinks.html">Drinks</a></li>
+            <li><a href="reference.html">Reference</a></li>
+            <li><a href="team.html">About Us</a></li>
+
+        </ul>
+    </div>
+
+    <h2 class="name">Lunch Entrees</h2>
+<!-- Img Links
+    <img class = "tofu" src="Chikpea_Salad.jpg" alt="Chikpea Salad Sandwich" onclick="openModal('ChikpeaModal')" 
+    style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; position: absolute; top: 260px; left: 150px;">
+    <p class="label" style="position: absolute; top: 410px; left: 150px;">Chikpea Salad Sandwich</p>
+
+    <img class="tofu" src="Bean_Tacos.jpeg" alt="Black Bean Tacos" onclick="openModal('BeanTacoModal')" 
+    style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; position: absolute; top: 260px; left: 350px;">
+    <p class="label" style="position: absolute; top: 410px; left: 350px;">Black Bean Tacos</p>
+
+    <img  class = "tofu" src="Pasta.jpeg" alt="Class Italian Red Pasta" onclick="openModal('PastaModal')"
+    style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; position: absolute; top: 260px; left: 550px;">
+    <p class="label" style="position: absolute; top: 410px; left: 550px;">Classic Italian Red Pasta</p>
+
+    <img class = "tofu" src = "Soup.jpg" alt = "Pumkin and Black Bean Soup " onclick="openModal('SoupModal')"
+    style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; position: absolute; top: 260px; left: 750px;">
+    <p class="label" style="position: absolute; top: 410px; left: 750px;">Craeamy Pumpkin Black Bean Soup</p>
+
+    <img class = "tofu" src = "falafel.jpg" alt = "Falafel Over Rice" onclick="openModal('FalafelModal')"
+    style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; position: absolute; top: 260px; left: 950px;">
+    <p id="pb" class="label" style="position: absolute; top: 410px; left: 930px;">Falafel Over Rice</p>
+-->
+
+<div class="dessert-container">
+    <div>
+        <img class="tofu" src="Chikpea_Salad.jpg" alt="Chickpea Saland Sandwhich" onclick="openModal('ChikpeaModal')">
+        <p class="label">Chikea Salad Sandwhich</p>
+    </div>
+    <div>
+        <img class="tofu" src="Bean_Tacos.jpeg" alt="Black Bean Tacos" onclick="openModal('BeanTacoModal')">
+        <p class="label">Black Bean Tacos</p>
+    </div>
+    <div>
+        <img class="tofu" src="Pasta.jpeg" alt="Classic Italian Red Pasta" onclick="openModal('PastaModal')">
+        <p class="label">Classic Italian Red Pasta</p>
+    </div>
+    <div>
+        <img class="tofu" src="Soup.jpg" alt="Pumpkin and Black Bean Soup" onclick="openModal('SoupModal')">
+        <p class="label">Creamy Pumpkin Black Bean Soup</p>
+    </div>
+    <div>
+        <img class="tofu" src="falafel.jpg" alt="Falafel over Rice " onclick="openModal('FalafelModal')">
+        <p class="label">Falafal Over Rice</p>
+    </div>
+</div>
+
+
+    <!-- Pancake Modal -->
+    <div id="ChikpeaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('ChikpeaModal')">&times;</span>
+            <h2>Fluffy Vegan Pancakes</h2>
+            <img class = "modalImage" src="Chikpea_Salad.jpg" alt="Chispea Salad Sandwich">
+            <p class="description">A creamy chickpea salad filling with a blend of different textures and colors, which consists of vegan mayo, cooked chickpeas, fresh chopped veggies, herbs, and a sprinkle of lemon juice in between two crispy pieces of whole grain bread. </p>
+            <p class="price" data-price="12.00">Price: $<span class="price-value">12.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <!-- AvocadoToast Modal -->
+    <div id="BeanTacoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('BeanTacoModal')">&times;</span>
+            <h2>Black Bean Taco </h2>
+            <img class = "modalImage" src="Bean_Tacos.jpeg" alt="Avocado Toast ">
+            <p class="description">A set of three tacos, filled with black beans, tangy tomato salsa, flavored spicy corn, fresh made guacamole, and vegan sour cream.</p>
+            <p class="price" data-price="15.00">Price: $<span class="price-value">15.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <!-- Berry Chia Parfait Modal -->
+    <div id="PastaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('PastaModal')">&times;</span>
+            <h2>Vegan Pasta </h2>
+            <img class = "modalImage" src="Pasta.jpeg" alt="Classic Italian Red Pasta">
+            <p class="description">Vegan pasta tossed in a rich, creamy, and tangy tomato sauce. Drizzled with olive oil and sprinkled with fresh basil.</p>
+            <p class="price" data-price="12.00">Price: $<span class="price-value">12.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>        
+    </div>
+
+    <!-- Tofu Scramble and Hash Modal -->
+    <div id="SoupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('SoupModal')">&times;</span>
+            <h2> Black Bean Soup </h2>
+            <img class = "modalImage" src="Soup.jpg" alt="Pumpkin and Black Bean Soup">
+            <p class="description">A rich nutty thick ginger and garlic infused pumpkin soup base filled with seasoned black beans and veggies, topped with pumpkin seeds and sweet coconut cream. Served with a rustic slice of artisan bread. </p>
+            <p class="price" data-price="15.00">Price: $<span class="price-value">15.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <div id="FalafelModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('FalafelModal')">&times;</span>
+            <h2> Falafel Over Rice </h2>
+            <img class = "modalImage" src="falafel.jpg" alt="Falafel Over Rice">
+            <p class="description">Crispy chickpea falafel, over spicy seasoned rice. Served with warm, soft pita bread and crispy chilled lettuce and tomatoes. All drizzled in creamy tahini sauce.</p>
+            <p class="price" data-price="12.00">Price: $<span class="price-value">12.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <a href="checkout.html">
+        <img class="shopping-cart" src="NEWcart.png" alt="Shopping Cart">
+        <span id="cart-count">0</span>
+    </a>
+    
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+    
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    
+        function addToCart(button) {
+        // Get the food name and price
+        const modalContent = button.closest('.modal-content');
+        const foodName = modalContent.querySelector('h2').innerText;
+        const foodPrice = parseFloat(modalContent.querySelector('.price').getAttribute('data-price')); // Ensure price is a number
+        const quantity = parseInt(modalContent.querySelector('.quantity').innerText); // Get the current quantity
+
+        // Retrieve existing cart from localStorage or initialize an empty array
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const page = window.location.pathname.split('/').pop(); // Get the current page name
+        const modalId = modalContent.id; // Get the modal ID
+
+
+
+        // Check if the item already exists in the cart
+        const existingItem = cart.find(item => item.name === foodName);
+        if (existingItem) {
+            // If the item exists, increment its quantity
+            existingItem.quantity += quantity;
+        } else {
+            // If the item doesn't exist, add it to the cart with quantity 1
+            cart.push({ name: foodName, price: foodPrice, quantity: quantity });
+        }
+
+        button.innerText = "Added";
+        button.disabled = true;
+
+        // Save the updated cart back to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        updateCartCount(); // Update the cart count display
+        
+        // Provide feedback to the user
+        alert(`${foodName} has been added to the cart!`);
+    }        
+    
+        function changeQuantity(button, change) {
+            const quantitySpan = button.parentElement.querySelector('.quantity');
+            let quantity = parseInt(quantitySpan.innerText);
+            quantity += change;
+            if (quantity < 1) quantity = 1;
+            if (quantity > 5) quantity = 5;
+            quantitySpan.innerText = quantity;
+    
+            const minusButton = button.parentElement.querySelector('.quantity-btn:first-child');
+            const plusButton = button.parentElement.querySelector('.quantity-btn:last-child');
+    
+            minusButton.classList.toggle('disabled', quantity === 1);
+            plusButton.classList.toggle('disabled', quantity === 5);
+    
+            // Update price dynamically
+            const priceElement = button.closest('.modal-content').querySelector('.price-value');
+            const basePrice = parseFloat(button.closest('.modal-content').querySelector('.price').getAttribute('data-price'));
+            priceElement.innerText = (basePrice * quantity).toFixed(2);
+        }
+    
+        function changeQuantity(button, change) {
+            const quantitySpan = button.parentElement.querySelector('.quantity');
+            let quantity = parseInt(quantitySpan.innerText);
+            quantity += change;
+            if (quantity < 1) quantity = 1;
+            if (quantity > 5) quantity = 5;
+            quantitySpan.innerText = quantity;
+    
+            const minusButton = button.parentElement.querySelector('.quantity-btn:first-child');
+            const plusButton = button.parentElement.querySelector('.quantity-btn:last-child');
+    
+            minusButton.classList.toggle('disabled', quantity === 1);
+            plusButton.classList.toggle('disabled', quantity === 5);
+    
+            // Update price dynamically
+            const priceElement = button.closest('.modal-content').querySelector('.price-value');
+            const basePrice = parseFloat(button.closest('.modal-content').querySelector('.price').getAttribute('data-price'));
+            priceElement.innerText = (basePrice * quantity).toFixed(2);
+        }
+        function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.innerText = totalItems;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartCount();
+});
+    </script>
+
+
+</body>
+</html>
+<!-- Stop here-->

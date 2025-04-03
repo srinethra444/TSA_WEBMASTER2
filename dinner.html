@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Green Fork - Entrees</title>
+    <link rel="stylesheet" href="dinner.css">
+    <title>Green Fork</title>
+    <link rel="icon" type="image/png" href="TSA_NEWLOGO.png">
+</head>
+<body>
+
+    <a href="checkout.html">
+        <img class="shopping-cart" src="NEWcart.png" alt="Shopping Cart">
+    </a>
+
+<!-- Navbar Code-->
+<h1> THE GREEN FORK </h1>
+<a href="index.html">
+<img class = "logo" src="TSA_NEWLOGO.png" alt="The Green Fork Logo">
+</a>
+    <div class="navbar">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="appetizer.html">Appetizers</a></li>
+            <li class="dropdown">
+                <a href="entree.html" class="dropbtn active">Entrees▾ <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="breakfast.html">Breakfast</a>
+                    <a href="lunch.html">Lunch</a>
+                    <a href="dinner.html">Dinner</a>
+                </div>
+            </li>
+            <li><a href="desserts.html">Desserts</a></li>
+            <li><a href="drinks.html">Drinks</a></li>
+            <li><a href="reference.html">Reference</a></li>
+            <li><a href="team.html">About Us</a></li>
+
+        </ul>
+    </div>
+
+    <h2 class="name">Dinner Entrees</h2>
+
+    
+
+
+<div class="dessert-container">
+    <div>
+        <img class = "tofu" src="sp-tofu.jpg" alt="Salt and Pepper TOfu" onclick="openModal('SPtofuModal')" >
+        <p class="label">Salt and Pepper Tofu</p>
+    </div>
+    <div>
+        <img class="tofu" src="paneer.jpg" alt="Shai Paneer Curry" onclick="openModal('PaneerModal')">
+        <p class="label">Shai Paneer Curry</p>
+    </div>
+    <div>
+        <img  class = "tofu" src="burger.jpeg" alt="Sweet Potato Burger" onclick="openModal('BurgerModal')">
+        <p class="label">Sweet Potato Burger</p>
+    </div>
+    <div>
+        <img class = "tofu" src = "avocado-roll.jpg" alt = "Avocado Roll " onclick="openModal('RollModal')">
+        <p class="label">Avocado Rolls</p>
+    </div>
+    <div>
+        <img class = "tofu" src = "chickpea.jpeg" alt = "Chickpea Quinoa Salad" onclick="openModal('ChickpeaModal')">
+        <p class="label">Chickpea Quinoa Salad</p>
+    </div>
+</div>
+
+    <!-- Salt and Pepper Modal -->
+    <div id="SPtofuModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('SPtofuModal')">&times;</span>
+            <h2>Salt and Pepper Tofu</h2>
+            <img class = "modalImage" src="sp-tofu.jpg" alt="Salt and Pepper Tofu">
+            <p class="description"> Crispy cubes of tofu, coated in salt, pepper, and other Chinese spices. Each cube is tender and slightly watery, creating the perfect texture combo.</p>
+            <p class="price" data-price="15.00">Price: $<span class="price-value">15.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <!-- Avocado Rolls Modal -->
+    <div id="RollModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('RollModal')">&times;</span>
+            <h2>Black Bean Taco </h2>
+            <img class = "modalImage" src="avocado-roll.jpg" alt="Avocado Rolls">
+            <p class="description">A platter of two rolls (16 pieces) of creamy avocado and sticky, slightly sweet rice wrapped in crispy seaweed. Served with soy sauce and fermented ginger.</p>
+            <p class="price" data-price="15.00">Price: $<span class="price-value">15.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <!-- Sweet Potato Burger Modal -->
+    <div id="BurgerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('BurgerModal')">&times;</span>
+            <h2>Sweet Potato Burger </h2>
+            <img class = "modalImage" src="burger.jpeg" alt="Sweet Potato Burger">
+            <p class="description">A thick flavorful burger. With a juicy sweet potato patty topped with lettuce, tomatoes, onions, avocado, and our secret suace blend. Served with French Fries</p>
+            <p class="price" data-price="15.00">Price: $<span class="price-value">15.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>        
+    </div>
+
+    <!-- Shai Paneer Curry Modal -->
+    <div id="PaneerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('PaneerModal')">&times;</span>
+            <h2> Shai Paneer Curry </h2>
+            <img class = "modalImage" src="paneer.jpg" alt="Shai Paneer Curry">
+            <p class="description">Creamy cashew and tomato curry base with tender seasoned vegan paneer. Served with rich thick Indian traditional flatbread naan. Also served with a side of lemon and fermented onions.</p>
+            <p class="price" data-price="15.00">Price: $<span class="price-value">15.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+<!-- Chickpea Quinoa Salad -->
+    <div id="ChickpeaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('ChickpeaModal')">&times;</span>
+            <h2> Falafel Over Rice </h2>
+            <img class = "modalImage" src="chickpea.jpeg" alt="Chickpea Quinoa Salad">
+            <p class="description">Lettuce, tomatoes, carrot, broccoli, cucumber, avocado, olives, bell peppers, chickpeas, roated quinoa, and baked sweet potato pieces tossed in our signature salad dressing.</p>
+            <p class="price" data-price="12.00">Price: $<span class="price-value">12.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <a href="checkout.html">
+        <img class="shopping-cart" src="NEWcart.png" alt="Shopping Cart">
+        <span id="cart-count">0</span>
+    </a>
+    
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+    
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    
+        function addToCart(button) {
+        // Get the food name and price
+        const modalContent = button.closest('.modal-content');
+        const foodName = modalContent.querySelector('h2').innerText;
+        const foodPrice = parseFloat(modalContent.querySelector('.price').getAttribute('data-price')); // Ensure price is a number
+        const quantity = parseInt(modalContent.querySelector('.quantity').innerText); // Get the current quantity
+
+        // Retrieve existing cart from localStorage or initialize an empty array
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Check if the item already exists in the cart
+        const existingItem = cart.find(item => item.name === foodName);
+        if (existingItem) {
+            // If the item exists, increment its quantity
+            existingItem.quantity += 1;
+        } else {
+            // If the item doesn't exist, add it to the cart with quantity 1
+            cart.push({ name: foodName, price: foodPrice, quantity: quantity });
+        }
+
+        button.innerText = "Added";
+        button.disabled = true;
+
+        // Save the updated cart back to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        updateCartCount(); // Update the cart count display
+        
+
+        // Provide feedback to the user
+        alert(`${foodName} has been added to the cart!`);
+    }        
+    
+        function changeQuantity(button, change) {
+            const quantitySpan = button.parentElement.querySelector('.quantity');
+            let quantity = parseInt(quantitySpan.innerText);
+            quantity += change;
+            if (quantity < 1) quantity = 1;
+            if (quantity > 5) quantity = 5;
+            quantitySpan.innerText = quantity;
+    
+            const minusButton = button.parentElement.querySelector('.quantity-btn:first-child');
+            const plusButton = button.parentElement.querySelector('.quantity-btn:last-child');
+    
+            minusButton.classList.toggle('disabled', quantity === 1);
+            plusButton.classList.toggle('disabled', quantity === 5);
+    
+            // Update price dynamically
+            const priceElement = button.closest('.modal-content').querySelector('.price-value');
+            const basePrice = parseFloat(button.closest('.modal-content').querySelector('.price').getAttribute('data-price'));
+            priceElement.innerText = (basePrice * quantity).toFixed(2);
+        }
+    
+        function changeQuantity(button, change) {
+            const quantitySpan = button.parentElement.querySelector('.quantity');
+            let quantity = parseInt(quantitySpan.innerText);
+            quantity += change;
+            if (quantity < 1) quantity = 1;
+            if (quantity > 5) quantity = 5;
+            quantitySpan.innerText = quantity;
+    
+            const minusButton = button.parentElement.querySelector('.quantity-btn:first-child');
+            const plusButton = button.parentElement.querySelector('.quantity-btn:last-child');
+    
+            minusButton.classList.toggle('disabled', quantity === 1);
+            plusButton.classList.toggle('disabled', quantity === 5);
+    
+            // Update price dynamically
+            const priceElement = button.closest('.modal-content').querySelector('.price-value');
+            const basePrice = parseFloat(button.closest('.modal-content').querySelector('.price').getAttribute('data-price'));
+            priceElement.innerText = (basePrice * quantity).toFixed(2);
+        }
+
+        function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.innerText = totalItems;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartCount();
+});
+    </script>
+
+</body>
+</html>

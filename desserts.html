@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Green Fork - Entrees</title>
+    <link rel="stylesheet" href="desserts.css">
+    <title>Green Fork</title>
+    <link rel="icon" type="image/png" href="TSA_NEWLOGO.png">
+</head>
+<body>
+
+<a href="checkout.html">
+    <img class="shopping-cart" src="NEWcart.png" alt="Shopping Cart">
+</a>
+
+<!-- Navbar Code-->
+<h1> THE GREEN FORK </h1>
+<a href="index.html">
+<img class = "logo" src="TSA_NEWLOGO.png" alt="The Green Fork Logo">
+</a>
+<div class="navbar">
+    <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="appetizer.html">Appetizers</a></li>
+        <li class="dropdown">
+            <a href="entree.html" >Entrees▾<i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="breakfast.html">Breakfast</a>
+                <a href="lunch.html">Lunch</a>
+                <a href="dinner.html">Dinner</a>
+            </div>
+        </li>
+        <li><a href="desserts.html" class="active">Desserts</a></li>
+        <li><a href="drinks.html">Drinks</a></li>
+        <li><a href="reference.html">Reference</a></li>
+        <li><a href="team.html">About Us</a></li>
+
+    </ul>
+</div>
+<!-- Img Links-->
+
+
+<!-- OLD CODE (NOT FLEXABLE) IF ERROR USE THIS AGAIN
+ <div class="dessert-container">
+    <img class="tofu" src="sorbet.jpg" alt="Fruit Sorbet" onclick="openModal('SorbetModal')" 
+    style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; top: 41%; left: 10%;">
+    <p class="label" style=" top: 65%; left: 10%;">Fruit Sorbet</p>
+
+    <img class = "tofu" src="chocostraw.jpg" alt="Chocolate Covered Strawberries" onclick="openModal('StrawberryModal')" 
+    style="cursor: pointer; width: 100%; max-width: 150px; border: 2px solid black; border-radius: 5px; top: 41%; left: 27%;">
+    <p class="label" style=" top: 65%; left: 27%;">Chocolate Covered Strawberries</p>
+
+    <img  class = "tofu" src="brownie.jpeg" alt="Sweet Potato Brownie" onclick="openModal('BrownieModal')"
+    style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; top: 260px; left: 550px;">
+    <p class="label" style=" top: 410px; left: 550px;">Sweet Potato Brownie</p>
+
+    <img class = "tofu" src = "berrytart.jpg" alt = "Berry Tart" onclick="openModal('TartModal')"
+    style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; top: 260px; left: 750px;">
+    <p class="label" style=" top: 410px; left: 750px;">Berry Tart</p>
+
+    <img class = "tofu" src = "cookies.jpeg" alt = "Cookie Combo" onclick="openModal('CookieModal')"
+    style="cursor: pointer; width: 150px; border: 2px solid black; border-radius: 5px; top: 260px; left: 950px;">
+    <p id="pb" class="label" style=" top: 410px; left: 930px;">Cookie Combo</p>
+</div>
+
+-->
+
+<div class="dessert-container">
+    <div>
+        <img class="tofu" src="sorbet.jpg" alt="Fruit Sorbet" onclick="openModal('SorbetModal')">
+        <p class="label">Fruit Sorbet</p>
+    </div>
+    <div>
+        <img class="tofu" src="chocostraw.jpg" alt="Chocolate Covered Strawberries" onclick="openModal('StrawberryModal')">
+        <p class="label">Chocolate Covered Strawberries</p>
+    </div>
+    <div>
+        <img class="tofu" src="brownie.jpeg" alt="Sweet Potato Brownie" onclick="openModal('BrownieModal')">
+        <p class="label">Sweet Potato Brownie</p>
+    </div>
+    <div>
+        <img class="tofu" src="berrytart.jpg" alt="Berry Tart" onclick="openModal('TartModal')">
+        <p class="label">Berry Tart</p>
+    </div>
+    <div>
+        <img class="tofu" src="cookies.jpeg" alt="Cookie Combo" onclick="openModal('CookieModal')">
+        <p class="label">Cookie Combo</p>
+    </div>
+</div>
+
+    <!-- Chocolate Covered Strawberries Modal -->
+    <div id="StrawberryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('StrawberryModal')">&times;</span>
+            <h2>Chocolate Covered Strawberries</h2>
+            <img class = "modalImage" src="chocostraw.jpg" alt="Chocolate Covered Strawberries">
+            <p class="description">A set of 6 fresh, sweet, juicy strawberries,dipped in dark chocolate with vegan white chocolate drizzle.</p>
+            <p class="price" data-price="7.00">Price: $<span class="price-value">7.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <!-- Fruit Sorbet Modal -->
+    <div id="SorbetModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('SorbetModal')">&times;</span>
+            <h2>Fruit Sorbet</h2>
+            <img class = "modalImage" src="sorbet.jpg" alt="Fruit Sorbet ">
+            <p class="description">A blend of frozen strawberries, raspberries, and dragonfrit ot create a icecream like smooth texture.</p>
+            <p class="price" data-price="7.00">Price: $<span class="price-value">7.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <!-- Sweet Potato Brownie Modal -->
+    <div id="BrownieModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('BrownieModal')">&times;</span>
+            <h2>Sweet Potato Brownie </h2>
+            <img class = "modalImage" src="brownie.jpeg" alt="Sweet Potato Brownie">
+            <p class="description">A fudgy brownie slice, made with sweet potatoes for a rich and thick texture. With morsels of dark chocolate in every bit. Served with caramel drizzle and a scoop of coconut cream icecream.</p>
+            <p class="price" data-price="6.00">Price: $<span class="price-value">6.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>        
+    </div>
+
+    <!-- Berry Tart Modal -->
+    <div id="TartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('TartModal')">&times;</span>
+            <h2> Berry Tart </h2>
+            <img class = "modalImage" src="berrytart.jpg" alt="Berry Tart">
+            <p class="description">A warm and soft crust topped with fresh fruit and syrup.</p>
+            <p class="price" data-price="6.00">Price: $<span class="price-value">6.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <div id="CookieModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('CookieModal')">&times;</span>
+            <h2> Cookie Combo </h2>
+            <img class = "modalImage" src="cookies.jpeg" alt="Cookie Combo">
+            <p class="description">Crispy chickpea falafel, over spicy seasoned rice. Served with warm, soft pita bread and crispy chilled lettuce and tomatoes. All drizzled in creamy tahini sauce.</p>
+            <p class="price" data-price="8.00">Price: $<span class="price-value">8.00</span></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <div class="cart-container">
+        <a href="checkout.html">
+            <img class="shopping-cart" src="NEWcart.png" alt="Shopping Cart">
+            <span id="cart-count">0</span>
+        </a>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+            modal.style.animation = "slideDown 0.5s ease-out"; // Trigger the animation
+        }
+    
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    
+        function addToCart(button) {
+        // Get the food name and price
+        const modalContent = button.closest('.modal-content');
+        const foodName = modalContent.querySelector('h2').innerText;
+        const foodPrice = parseFloat(modalContent.querySelector('.price').getAttribute('data-price')); // Ensure price is a number
+        const quantity = parseInt(modalContent.querySelector('.quantity').innerText); // Get the current quantity
+
+        // Retrieve existing cart from localStorage or initialize an empty array
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Check if the item already exists in the cart
+        const existingItem = cart.find(item => item.name === foodName);
+        if (existingItem) {
+            // If the item exists, increment its quantity
+            existingItem.quantity += 1;
+        } else {
+            // If the item doesn't exist, add it to the cart with quantity 1
+            cart.push({ name: foodName, price: foodPrice, quantity: quantity });
+        }
+
+        button.innerText = "Added";
+        button.disabled = true;
+
+        // Save the updated cart back to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+ updateCartCount(); // Update the cart count display
+        
+
+        // Provide feedback to the user
+        alert(`${foodName} has been added to the cart!`);
+    }        
+    
+        function changeQuantity(button, change) {
+            const quantitySpan = button.parentElement.querySelector('.quantity');
+            let quantity = parseInt(quantitySpan.innerText);
+            quantity += change;
+            if (quantity < 1) quantity = 1;
+            if (quantity > 5) quantity = 5;
+            quantitySpan.innerText = quantity;
+    
+            const minusButton = button.parentElement.querySelector('.quantity-btn:first-child');
+            const plusButton = button.parentElement.querySelector('.quantity-btn:last-child');
+    
+            minusButton.classList.toggle('disabled', quantity === 1);
+            plusButton.classList.toggle('disabled', quantity === 5);
+    
+            // Update price dynamically
+            const priceElement = button.closest('.modal-content').querySelector('.price-value');
+            const basePrice = parseFloat(button.closest('.modal-content').querySelector('.price').getAttribute('data-price'));
+            priceElement.innerText = (basePrice * quantity).toFixed(2);
+        }
+    
+        function changeQuantity(button, change) {
+            const quantitySpan = button.parentElement.querySelector('.quantity');
+            let quantity = parseInt(quantitySpan.innerText);
+            quantity += change;
+            if (quantity < 1) quantity = 1;
+            if (quantity > 5) quantity = 5;
+            quantitySpan.innerText = quantity;
+    
+            const minusButton = button.parentElement.querySelector('.quantity-btn:first-child');
+            const plusButton = button.parentElement.querySelector('.quantity-btn:last-child');
+    
+            minusButton.classList.toggle('disabled', quantity === 1);
+            plusButton.classList.toggle('disabled', quantity === 5);
+    
+            // Update price dynamically
+            const priceElement = button.closest('.modal-content').querySelector('.price-value');
+            const basePrice = parseFloat(button.closest('.modal-content').querySelector('.price').getAttribute('data-price'));
+            priceElement.innerText = (basePrice * quantity).toFixed(2);
+        }
+
+        function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.innerText = totalItems;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartCount();
+});
+    </script>
+
+
+</body>
+</html>
+
+
+<!--
+.dessert-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Add spacing between items */
+  padding: 20px;
+}
+
+.label {
+  font-weight: bold;
+  color: #106329;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  width: 150px;
+}
+  
+.tofu {
+height: 150px;
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 300px) {
+  .dessert-container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+  }
+
+  .tofu {
+      width: 80%; /* Make images take up more space */
+  }
+
+  .label {
+      font-size: 1.2rem; /* Increase font size for readability */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .tofu {
+      width: 90%; /* Make images almost full width */
+  }
+
+  .label {
+      font-size: 1rem; /* Adjust font size */
+  }
+}
+-->
